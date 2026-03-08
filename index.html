@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zama Electrical Services</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f6f9;
+}
+
+/* HERO SECTION */
+
+.hero{
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1581092919535-7146ff1a590d");
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.hero a{
+background:#ffc107;
+padding:14px 25px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+color:black;
+}
+
+/* CONTENT */
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:40px 0;
+}
+
+.card{
+background:white;
+padding:25px;
+margin-bottom:25px;
+border-radius:8px;
+box-shadow:0 3px 12px rgba(0,0,0,0.1);
+}
+
+h2{
+color:#0b3d63;
+}
+
+/* SERVICES GRID */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.service-box{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.service-box h3{
+color:#0b3d63;
+}
+
+/* FORM */
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+button{
+background:#0b3d63;
+color:white;
+padding:12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#145a8a;
+}
+
+/* FOOTER */
+
+footer{
+background:#0b3d63;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* FLOAT BUTTONS */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.call{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#007BFF;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Zama Electrical Services</h1>
+
+<p>Govt Licensed Class I Electrical Contractor</p>
+
+<a href="tel:9663506318">Call Now</a>
+
+</section>
+
+<div class="container">
+
+<!-- ABOUT -->
+
+<div class="card">
+
+<h2>About Us</h2>
+
+<p>
+We are Government Licensed Class I Electrical Contractors providing
+professional Electrical HT & LT services across Bengaluru.
+We handle testing, installation, calibration, wiring, and BESCOM related work.
+</p>
+
+</div>
+
+<!-- SERVICES -->
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="service-box">
+<h3>Meter Testing</h3>
+<p>Testing & calibration of energy meters, CTs, PTs, relays and DG sets.</p>
+</div>
+
+<div class="service-box">
+<h3>BESCOM Work</h3>
+<p>Temporary & permanent meter connections, name change, tariff updates.</p>
+</div>
+
+<div class="service-box">
+<h3>Cable Testing</h3>
+<p>HT, LT & UG cable testing and earth pit reconditioning.</p>
+</div>
+
+<div class="service-box">
+<h3>Transformer Service</h3>
+<p>Transformer oil testing and filtration while in service.</p>
+</div>
+
+<div class="service-box">
+<h3>CCTV Installation</h3>
+<p>Professional CCTV camera installation for homes & offices.</p>
+</div>
+
+<div class="service-box">
+<h3>Wiring</h3>
+<p>Complete house wiring and industrial electrical wiring solutions.</p>
+</div>
+
+</div>
+
+<!-- QUOTE -->
+
+<div class="card">
+
+<h2>Get a Quote</h2>
+
+<form onsubmit="sendWhatsApp(); return false;">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="tel" id="phone" placeholder="Phone Number" required>
+
+<textarea id="message" placeholder="Describe your electrical work"></textarea>
+
+<button type="submit">Send Request</button>
+
+</form>
+
+</div>
+
+<!-- LOCATION -->
+
+<div class="card">
+
+<h2>Our Location</h2>
+
+<p>
+54/4, H. K. P Broadway Road<br>
+Rajiv Gandhi Colony<br>
+Shivaji Nagar<br>
+Bengaluru, Karnataka 560051
+</p>
+
+<iframe
+src="https://maps.google.com/maps?q=shivaji%20nagar%20bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="300"
+style="border:0;">
+</iframe>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>📞 09663506318</p>
+
+<p>© 2026 Zama Electrical Services</p>
+
+</footer>
+
+<a class="call" href="tel:9663506318">Call</a>
+
+<a class="whatsapp" href="https://wa.me/919663506318">WhatsApp</a>
+
+<script>
+
+function sendWhatsApp(){
+
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var message=document.getElementById("message").value;
+
+var url="https://wa.me/919663506318?text="
++"Name: "+name+"%0a"
++"Phone: "+phone+"%0a"
++"Work: "+message;
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+</html>
